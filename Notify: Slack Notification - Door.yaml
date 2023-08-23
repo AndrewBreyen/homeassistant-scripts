@@ -1,0 +1,14 @@
+alias: "Notify: Slack Notification - Door"
+sequence:
+  - service: notify.breyen
+    data:
+      message: Door opened!
+      title: Door opened!
+      data:
+        blocks:
+          - type: section
+            text:
+              type: mrkdwn
+              text: "Door opened! :door:"
+mode: single
+icon: mdi:door

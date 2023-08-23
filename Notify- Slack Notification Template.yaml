@@ -1,0 +1,15 @@
+alias: "Notify: Slack Notification Template"
+sequence:
+  - service: notify.breyen
+    data:
+      message: Fallback text for if blocks cannot be displayed
+      title: Door opened!
+      data:
+        blocks:
+          - type: section
+            text:
+              type: mrkdwn
+              text: >-
+                This is a mrkdwn section block *this is bold*, and ~this is
+                crossed out~, and <https://google.com|this is a link>
+mode: single

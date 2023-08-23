@@ -1,0 +1,15 @@
+alias: Turn On Dimmable Lights 1% Warm
+sequence:
+  - service: light.turn_on
+    data:
+      brightness_pct: 1
+      color_temp: 500
+      transition: 3
+    alias: Turn On Lights 1% Warm
+    target:
+      entity_id:
+        - light.andrews_room_side_lamps
+        - light.living_room_lamp
+        - light.bathroom_light
+        - light.kitchen_light
+mode: single
